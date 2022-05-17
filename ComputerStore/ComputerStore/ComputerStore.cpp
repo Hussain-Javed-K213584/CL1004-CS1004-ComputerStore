@@ -10,39 +10,39 @@ Step 1) A customer logs in with his id and pass.
 #include <fstream>
 #include <conio.h>
 using namespace std;
-//template<typename T>
-//class LoginSystem {
-//	T place_username, real_user, place_pass, real_pass;
-//	char choice;
-//public:
-//	/*This will call the
-//	template to login
-//	or register the customer.*/
-//	void LogintoApp()
-//	{
-//		system("cls");
-//		cout << "\t\t\t\tUsername: ";
-//		getline(cin >> ws, place_username);
-//		cout << "\t\t\t\tPassword: ";
-//		getline(cin >> ws, place_pass);
-//	}
-//	void RegisterApp()
-//	{
-//
-//	}
-//};
-class Customer {
-	//logically customer class will have login stuff
+class Owner {
+	string name;
 public:
-	void test()
+	Owner()
 	{
-		cout << "Function test of customer called :)";
+		name = "Hussain Javed";
+		
+	}
+	void LoginAsOwner()
+	{
+
+	}
+};
+class Customer {
+	//logically customer class will have login stuff.
+	string true_username, false_username, tru_pass, false_pass;
+public:
+	Customer(){}
+	void LoginAsCustomer()
+	{
+
+	}
+	
+	void RegisterToApp()
+	{
+
 	}
 };
 class Shop {
 private:
 	char choice;
 	Customer customer; //HAS-A customer
+	Owner owner;
 public:
 	Shop()
 	{
@@ -51,16 +51,21 @@ public:
 	void startShop()
 	{
 		cout << "\t\t\t\tWelcome to PcZone\n\n\n\n"
-			<< "\t\t\t\t1) Login\n"
+			<< "\t\t\t\t1) Login Owner\n"
+			<< "\t\t\t\t2) Login Customer\n"
 			<< "\t\t\t\t2) Register\n";
 		choice = _getch();
 		if (choice == '1')
 		{
-			
+			owner.LoginAsOwner();
 		}
 		else if (choice == '2')
 		{
-			customer.test();
+			customer.LoginAsCustomer();
+		}
+		else if (choice == '3')
+		{
+			customer.RegisterToApp();
 		}
 	}
 };
