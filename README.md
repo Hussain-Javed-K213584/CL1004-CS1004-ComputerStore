@@ -11,3 +11,4 @@ three tasks as follows:
 	*The cart is modified in a way that the user can delete items from the inventory as well.
 	*The cart is a vector tuple array which consist of product name, price and stock.
 	*The cart also provides with the total of the items in the inventory.
+2) 
